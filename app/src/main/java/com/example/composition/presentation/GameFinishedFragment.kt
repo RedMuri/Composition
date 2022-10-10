@@ -39,6 +39,7 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun setGameResult() {
+        binding.gameResult = args.gameResult
         binding.tvRequiredAnswers.text = String.format(getString(R.string.required_score),
             args.gameResult.gameSettings.minCountOfRightAnswers)
         binding.tvScoreAnswers.text =
