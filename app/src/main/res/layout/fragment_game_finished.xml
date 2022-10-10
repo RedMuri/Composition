@@ -32,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            tools:text="@string/required_score"
             requiredAnswers="@{gameResult.gameSettings.minCountOfRightAnswers}"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/tv_score_answers"
@@ -45,6 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            tools:text="@string/score_answers"
             score="@{gameResult.countOfRightAnswers}"
             app:layout_constraintBottom_toTopOf="@id/tv_required_percentage"
             app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
@@ -57,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textSize="18sp"
+            tools:text="@string/required_percentage"
             requiredPercentage="@{gameResult.gameSettings.minCountOfRightAnswers}"
             app:layout_constraintBottom_toTopOf="@id/tv_score_percentage"
             app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
@@ -69,11 +72,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textSize="18sp"
             requiredPercentage="@{gameResult.gameSettings.minPercentOfRightAnswers}"
+            tools:text="@string/score_percentage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
             app:layout_constraintStart_toStartOf="@id/tv_required_answers"
             app:layout_constraintTop_toBottomOf="@id/tv_required_percentage" />
+
 
         <Button
             android:id="@+id/button_retry"
